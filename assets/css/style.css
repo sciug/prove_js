@@ -1,0 +1,129 @@
+.box_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+    font-family: 'VT323', monospace;}
+
+
+
+.btn{
+    border: none;
+    padding: 3rem 1rem;
+    border-radius: 20px;
+    margin: 0 .5rem;
+    position: relative;
+    top: 0;
+    transition: all 250ms;
+    transform: scale(1);
+    transform: rotate(180deg);
+}
+#red{
+    background-color: red;
+    box-shadow: 0px 0px 10px red;
+}
+
+#red.btn::after{
+    content:"";
+    background-color: rgba(255, 102, 102, 0.616);
+    position: absolute;
+    height: 50px;
+    width: 8px;
+    right: 5px;
+    top:10px;
+    border-radius: 25px;
+   
+
+}
+#red.btn::before{
+    content:"";
+    background-color: rgba(255, 102, 102, 0.664);
+    position: absolute;
+    height: 15px;
+    width: 8px;
+    right: 5px;
+    bottom:10px;
+    border-radius: 25px;
+
+}
+
+
+
+
+#blue{
+    background-color: royalblue;
+    box-shadow: 0px 0px 10px royalblue;
+}
+
+#blue.btn::after{
+    content:"";
+    background-color: rgba(102, 130, 255, 0.616);
+    position: absolute;
+    height: 50px;
+    width: 8px;
+    right: 5px;
+    top:10px;
+    border-radius: 25px;
+
+}
+#blue.btn::before{
+    content:"";
+    background-color:rgba(102, 130, 255, 0.616);
+    position: absolute;
+    height: 15px;
+    width: 8px;
+    right: 5px;
+    bottom:10px;
+    border-radius: 25px;
+
+}
+
+
+.btn:hover{
+    top: -5px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.typewriter{
+    display: inline-block;
+}
+
+.typewriter-text{
+    font-size: 2rem;
+    color: greenyellow;
+    margin-bottom: 5rem;
+    text-shadow: 0px 0px 10px greenyellow;
+    display: inline-block;
+  	overflow: hidden;
+  	letter-spacing: 2px;
+ 	animation: typing 3s steps(32, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    font-weight: 700;
+    border-right: 4px solid greenyellow;
+    box-sizing: border-box;
+}
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color:greenyellow; 
+    }
+}
+
+
+.hidden{
+    display: none;
+}
